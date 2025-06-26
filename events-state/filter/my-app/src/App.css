@@ -37,3 +37,47 @@
   }
 }
 
+.portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-list {
+  column-count: 3;
+  column-gap: 10px;
+}
+
+.project-list img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.filter-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: black;
+  padding: 6px 12px;
+  margin-right: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button.active {
+  background-color: #444; 
+  color: white;           
+  border-color: #444;
+}
+
