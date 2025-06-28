@@ -3,12 +3,23 @@ import ShopItem from './ShopItem';
 
 function ListView({ items }) {
   return (
-    <div style={{ marginTop: 20 }}>
+    <div className="list-view">
       {items.map((product, index) => (
-        <ShopItem key={index} product={product} />
+        <div className="shop-item" key={index}>
+          <img src={product.img} alt={product.name} />
+          
+            <h3>{product.name}</h3>
+            <p className="color">{product.color}</p>
+          
+          
+            <p className="price">${product.price}</p>
+            <button>ADD TO CART</button>
+          
+        </div>
       ))}
     </div>
   );
 }
+
 
 export default ListView;

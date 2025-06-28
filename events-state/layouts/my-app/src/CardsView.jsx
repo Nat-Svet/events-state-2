@@ -1,21 +1,19 @@
 import React from 'react';
 import ShopCard from './ShopCard';
+import './App.css'
 
 function CardsView({ cards }) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        gap: 20,
-        flexWrap: 'wrap',
-        marginTop: 20,
-      }}
-    >
+       
+    <div className="cards-view">
       {cards.map((product, index) => (
+        
         <ShopCard key={index} product={product} />
       ))}
+      
     </div>
   );
 }
+
 
 export default CardsView;

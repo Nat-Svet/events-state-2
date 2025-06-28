@@ -52,24 +52,21 @@ class Store extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      layout: 'cards', 
+      view: 'grid', 
     };
   }
 
-  toggleLayout = () => {
-    this.setState(({ layout }) => ({
-      layout: layout === 'cards' ? 'list' : 'cards',
-    }));
+  toggleView = (view) => {
+    this.setState({ view });
   };
 
   render() {
-    const { layout } = this.state;
-    const icon = layout === 'cards' ? 'view_list' : 'view_module';
+    const { view } = this.state;
 
     return (
       <div>
-        <IconSwitch icon={icon} onSwitch={this.toggleLayout} />
-        {layout === 'cards' ? (
+        <IconSwitch view={view} onSwitch={this.toggleView} />
+        {view === 'grid' ? (
           <CardsView cards={products} />
         ) : (
           <ListView items={products} />
